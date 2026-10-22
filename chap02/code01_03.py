@@ -12,7 +12,6 @@ class main():
         self.calc_ok()
         return
 
-
     def calc_ng(self):
         30 + 5
         return
@@ -20,6 +19,7 @@ class main():
     def calc_ok(self):
         print(30 + 5)
         return
+
 
 if __name__ == "__main__":
     main()

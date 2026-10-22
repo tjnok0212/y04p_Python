@@ -19,5 +19,6 @@ class main():
         print("人をいやす。")
         return
 
+
 if __name__ == "__main__":
     main()

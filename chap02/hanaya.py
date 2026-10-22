@@ -5,22 +5,36 @@ class hanaya():
     __PRICE_SUN_FLOWER = 400
     __PRICE_TULIP = 700
 
-    def __init__(self, num_rose=0, num_sun_flower=0, num_tulip=0):
+    def __init__(
+            self,
+            num_rose = 0,
+            num_sun_flower = 0,
+            num_tulip = 0,
+            ):
         self.__num_rose = num_rose
         self.__num_sun_flower = num_sun_flower
         self.__num_tulip = num_tulip
 
         return
 
-    def add_num_rose(self, num):
+    def add_num_rose(
+            self,
+            num,
+            ):
         self.__num_rose += num
         return self
 
-    def add_num_sun_flower(self, num):
+    def add_num_sun_flower(
+            self,
+            num,
+            ):
         self.__num_sun_flower += num
         return self
 
-    def add_num_tulip(self, num):
+    def add_num_tulip(
+            self,
+            num,
+            ):
         self.__num_tulip += num
         return self
 
@@ -36,8 +50,13 @@ class hanaya():
     def calc_flower(self):
         return self.buy_rose() + self.buy_sun_flower() + self.buy_tulip()
 
+
 if __name__ == "__main__":
-    hanaya = hanaya(num_rose=18, num_sun_flower=8, num_tulip=21)
+    hanaya = hanaya(
+        num_rose = 18,
+        num_sun_flower = 8,
+        num_tulip = 21,
+        )
     hanaya.add_num_sun_flower(-2).add_num_tulip(-5)
     sum_price = hanaya.calc_flower()
     print("買い物の合計は、{:.0f}円".format(sum_price))

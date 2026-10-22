@@ -7,5 +7,6 @@ class main():
         print( (1 + 2) * 3 )
         return
 
+
 if __name__ == "__main__":
     main()

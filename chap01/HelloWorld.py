@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 class main():
-    def __init__(self):
+    def __init__(self,):
         print("Hello World")
         return
 
