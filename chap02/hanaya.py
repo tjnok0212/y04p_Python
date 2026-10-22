@@ -1,9 +1,9 @@
 # -*- coding: UTF-8 -*-
 
 class hanaya():
-    __price_rose = 500
-    __price_sun_flower = 400
-    __price_tulip = 700
+    __PRICE_ROSE = 500
+    __PRICE_SUN_FLOWER = 400
+    __PRICE_TULIP = 700
 
     def __init__(self, num_rose=0, num_sun_flower=0, num_tulip=0):
         self.__num_rose = num_rose
@@ -25,13 +25,13 @@ class hanaya():
         return self
 
     def buy_rose(self):
-        return self.__price_rose * self.__num_rose
+        return self.__PRICE_ROSE * self.__num_rose
 
     def buy_sun_flower(self):
-        return self.__price_sun_flower * self.__num_sun_flower
+        return self.__PRICE_SUN_FLOWER * self.__num_sun_flower
 
     def buy_tulip(self):
-        return self.__price_tulip * self.__num_tulip
+        return self.__PRICE_TULIP * self.__num_tulip
 
     def calc_flower(self):
         return self.buy_rose() + self.buy_sun_flower() + self.buy_tulip()

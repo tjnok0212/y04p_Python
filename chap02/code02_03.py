@@ -1,10 +1,10 @@
 # -*- coding: UTF-8 -*-
 
 class main():
-    __per_inch = 2.54
+    __PER_INCH = 2.54
 
     def __init__(self, inch=1):
-        self.__cm = inch * self.__per_inch
+        self.__cm = inch * self.__PER_INCH
         print(inch,  "inch = ", self.__cm, "cm")
         return
 
