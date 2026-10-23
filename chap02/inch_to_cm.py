@@ -21,6 +21,11 @@ class main():
         print(desc)
         return self
 
+    def view3(self):
+        desc = f"{self.__inch:d}インチ = {self.__cm:.2f}センチ"
+        print(desc)
+        return self
+
     def set_inch(
             self,
             inch,
@@ -30,4 +35,4 @@ class main():
 
 
 if __name__ == "__main__":
-    main(24).view().view2()
+    main(24).view().view2().view3()
