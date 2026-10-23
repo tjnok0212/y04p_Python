@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-class calcDaikei():
+class CalcDaikei():
     def __init__(
             self,
             upper_base = 2,
@@ -40,5 +40,5 @@ class calcDaikei():
 
 
 if __name__ == "__main__":
-    daikei = calcDaikei()
+    daikei = CalcDaikei()
     daikei.calc_menseki()

@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-class main():
+class Main():
     def __init__(self):
         print("Do calc_ng:", end="")
         self.calc_ng()
@@ -22,4 +22,4 @@ class main():
 
 
 if __name__ == "__main__":
-    main()
+    Main()

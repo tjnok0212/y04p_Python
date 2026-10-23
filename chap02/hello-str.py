@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-class main():
+class Main():
     def __init__(self):
         self.double_quote().single_quote()
         return
@@ -15,4 +15,4 @@ class main():
 
 
 if __name__ == "__main__":
-    main()
+    Main()

@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-class hanaya():
+class Hanaya():
     __PRICE_ROSE = 500
     __PRICE_SUN_FLOWER = 400
     __PRICE_TULIP = 700
@@ -52,7 +52,7 @@ class hanaya():
 
 
 if __name__ == "__main__":
-    hanaya = hanaya(
+    hanaya = Hanaya(
         num_rose = 18,
         num_sun_flower = 8,
         num_tulip = 21,

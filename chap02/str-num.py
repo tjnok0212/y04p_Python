@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-class main():
+class Main():
     def __init__(self):
         self.__kion = 30
         return
@@ -19,4 +19,4 @@ class main():
 
 
 if __name__ == "__main__":
-    main().merge_str_and_int_NG()
+    Main().merge_str_and_int_NG()

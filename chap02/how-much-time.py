@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-class main():
+class Main():
     def __init__(
             self,
             kyori = 507.5,
@@ -17,4 +17,4 @@ class main():
 
 
 if __name__ == "__main__":
-    main()
+    Main()

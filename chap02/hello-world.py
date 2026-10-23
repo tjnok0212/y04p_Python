@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-class main():
+class Main():
     def __init__(self):
         self.merge_str1().merge_str2()
         return
@@ -19,4 +19,4 @@ class main():
 
 
 if __name__ == "__main__":
-    main()
+    Main()

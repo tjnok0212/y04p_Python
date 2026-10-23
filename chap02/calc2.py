@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-def main():
+def Main():
     print( 20 * 3 )
     print( 2 * 5 // 3 )
     print( (1 + 2) * 3 )
@@ -8,4 +8,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    Main()

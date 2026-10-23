@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-class main():
+class Main():
     def __init__(self):
         self.kakugen1()
         self.kakugen2()
@@ -21,4 +21,4 @@ class main():
 
 
 if __name__ == "__main__":
-    main()
+    Main()
