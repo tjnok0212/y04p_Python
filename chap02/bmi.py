@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 class MeasureBmi():
-    __judge = True
+    __is_judge = True
     def __init__(
             self,
             weight = -1,
@@ -14,7 +14,7 @@ class MeasureBmi():
 
     def __calc_bmi(self):
         self.__check_value()
-        if self.__judge:
+        if self.__is_judge:
             __h = self.__height / 100
             self.__bmi = self.__weight / (__h ** 2)
         else:
@@ -22,7 +22,7 @@ class MeasureBmi():
         return self
 
     def view_result1(self):
-        if self.__judge:
+        if self.__is_judge:
             if self.__bmi < 18.5:
                 __result = "痩せ型"
             if (18.5 <= self.__bmi) and (self.__bmi < 25):
@@ -39,7 +39,7 @@ class MeasureBmi():
         return self
 
     def view_result2(self):
-        if self.__judge:
+        if self.__is_judge:
             if self.__bmi < 18.5:
                 __result = "痩せ型"
             if 18.5 <= self.__bmi < 25:
@@ -56,7 +56,7 @@ class MeasureBmi():
         return self
 
     def view_result3(self):
-            if self.__judge:
+            if self.__is_judge:
                 if self.__bmi < 18.5:
                     __result = "痩せ型"
                 elif self.__bmi <= 25:
@@ -74,10 +74,10 @@ class MeasureBmi():
 
     def __check_value(self):
         if self.__weight <= 0:
-            self.__judge = False
+            self.__is_judge = False
 
         if self.__height <= 0:
-            self.__judge = False
+            self.__is_judge = False
 
         return self
 

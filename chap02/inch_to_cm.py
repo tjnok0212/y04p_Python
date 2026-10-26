@@ -20,8 +20,13 @@ class Main():
         print(desc)
         return self
 
-    def view2(self):
+    def view2_1(self):
         desc = "{0:.2f}インチ = {1:.2f}センチ".format(self.__inch, self.__cm)
+        print(desc)
+        return self
+
+    def view2_2(self):
+        desc = "{inch:.2f}インチ = {cm:.2f}センチ".format(inch=self.__inch, cm=self.__cm)
         print(desc)
         return self
 
