@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 
 class main():
     __is_leap = False
@@ -9,7 +9,7 @@ class main():
             ):
         self.__input_y = year if year > 0 else int(input("西暦何年？> "))
         self.__value_check()
-        self.__judge_leap02()
+        self.__judge_leap03()
         return
 
     def __judge_leap01(self):
@@ -35,6 +35,10 @@ class main():
         else:
             pass
         return
+
+    def __judge_leap03(self):
+        self.__is_leap = (self.__input_y % 400 == 0) or ((self.__input_y % 100 != 0) and (self.__input_y % 4 == 0))
+        return self
 
     def view_result(self):
         if self.__is_judge:

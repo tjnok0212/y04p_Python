@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 
 def Main():
     level = int(input("現在のレベルは？> "))

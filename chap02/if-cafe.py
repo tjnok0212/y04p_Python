@@ -1,4 +1,4 @@
-# coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 
 def Main():
     kion = int(input("本日の気温は？> "))
