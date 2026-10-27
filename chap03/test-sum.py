@@ -24,7 +24,7 @@ def main():
             )
 
     # 平均を求める
-    ave_v = sum_v / len(points)    # 平均 = 合計 / 点数の数
+    ave_v = sum_v / len(points) # 平均 = 合計 / 点数の数
     print(
         "平均点は",
         ave_v,
