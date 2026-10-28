@@ -1,25 +1,27 @@
 # -*- coding: utf-8 -*-
 
+from common.exec_logger import run_and_done, show_env
+
 def main():
     # リストの生成
-    a = [
-        10,
-        22,
-        30,
-        45,
-        ]
-    print("Done: a = [10, 22, 30, 45,]")
-    print("a =", a)
+    # a = [
+    #     10,
+    #     22,
+    #     30,
+    #     45,
+    #     ]
+    env = {}
+    run_and_done("a = [10, 22, 30, 45,]", env)
+    run_and_done("a[1] = 555", env)
+    print(f"Done: a = {env["a"]}")
 
-    a[1] = 555; print("Done: a[1] = 555")
-    print("a =", a)
-
-    a = [i for i in range(1, 8)]; print("Done: a = [i for i in range(1, 8)]")
+    print("-"*30)
+    run_and_done("a = [i for i in range(1, 8)]", env)
     # a = list(range(1,8)) でも可
-    print("len(a):", len(a))
+    print(f"Done: len(a) = {len(env["a"])}")
 
-    b = [i*2 for i in range(4)]; print("Done: b = [i*2 for i in range(4)]")
-    print("len(b):", len(b))
+    run_and_done("b = [i*2 for i in range(4)]", env)
+    print(f"Done: len(b) = {len(env["b"])}")
     return
 
 
