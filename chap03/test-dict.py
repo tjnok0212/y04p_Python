@@ -38,7 +38,7 @@ class TestResult():
             # 小数点以下を丸める
             diff_v = round(diff_v, 1)   # diff_v の値を小数点以下1位になるように四捨五入
             # 書式に沿って出力
-            print(fmt.format(name=name, v=v, diff_v=diff_v))
+            print(fmt.format(name = name, v = v, diff_v = diff_v))
             continue
         return self
 
