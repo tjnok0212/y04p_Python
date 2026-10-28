@@ -10,8 +10,7 @@ class TestResult():
             "Fukuda": 66,
             "Sakai": 80,
             }
-        self.__calc_sum()
-        self.__calc_ave()
+        self.__calc_sum().__calc_ave()
         return
 
     def __calc_sum(self):
@@ -22,11 +21,7 @@ class TestResult():
         return self
 
     def __calc_ave(self):
-        try:
-            self.ave_v = self.sum_v / len(self.records)
-        except NameError:
-            self.__calc_sum()
-            self.__calc_ave()
+        self.ave_v = self.sum_v / len(self.records)
         return self
 
     def view_general(self):
