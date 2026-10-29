@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 
+from common.exec_logger import run_and_done
+
 def main():
+    env = {}
     # タプル a を作成
-    a = (10, 20, 30); print("Done: a = (10, 20, 30)")
+    run_and_done("a = (10, 20, 30)", env)
     # その要素を参照する
-    print("a[1]:", a[1])
+    print(f"a[1] = {env["a"][1]}")
     # スライス
-    print("a[:2]:",a[:2])
+    print(f"a[:2] = {env["a"][:2]}")
     return
 
 

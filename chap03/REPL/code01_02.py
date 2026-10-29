@@ -1,16 +1,22 @@
 # -*- coding: utf-8 -*-
 
-def main():
-    # for 構文で enumerate() を使う
-    fruits = [
-        "Apple",
-        "Orange",
-        "Banana",
-        ]
+import textwrap
+from common.exec_logger import run_and_done
 
-    for i, v in enumerate(fruits):
-        print(i, v)
-        continue
+def main():
+    env = {}
+    # for 構文で enumerate() を使う
+    run_and_done(textwrap.dedent("""
+        fruits = [
+            "Apple",
+            "Orange",
+            "Banana",
+            ]\
+        """), env)
+    run_and_done(textwrap.dedent("""
+        for i, v in enumerate(fruits):
+            print(i, v)\
+        """), env)
     return
 
 

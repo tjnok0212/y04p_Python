@@ -1,13 +1,24 @@
 # -*- coding: utf-8 -*-
 
-def main():
-    s = "This is a pen"
-    print("s.split():", s.split())
+import textwrap
+from common.exec_logger import run_and_done
 
-    print("-"*30)
-    s = "2020/02/20"
-    print(s.split("/"))
-    print(s.split("/", maxsplit=1))
+def main():
+    env = {}
+    run_and_done(textwrap.dedent("""\
+        s = "This is a pen"\
+        """), env)
+    print(f"s.split() = {env["s"].split()}")
+
+    run_and_done(textwrap.dedent("""\
+        s = "2020/02/20"\
+        """), env)
+    print(textwrap.dedent(f"""\
+        s.split("/") = {env["s"].split("/")}\
+        """))
+    print(textwrap.dedent(f"""\
+        s.split("/") = {env["s"].split("/", maxsplit=1)}\
+        """))
     return
 
 

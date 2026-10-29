@@ -15,11 +15,12 @@ def run_and_done(code_str, scope_dict=None):
         global_vars = scope_dict
         local_vars = scope_dict
     
-    # 1. 取得したスコープでコードを実行
+    # 1. 希望のフォーマットで出力
+    print("-"*30 + f"\n>>> {code_str}")
+
+    # 2. 取得したスコープでコードを実行
     exec(code_str, global_vars, local_vars)
-    
-    # 2. 希望のフォーマットで出力
-    print(f"Done: {code_str}")
+
 
 
 def show_env(env, filtered=True):

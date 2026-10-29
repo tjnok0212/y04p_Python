@@ -1,32 +1,39 @@
 # -*- coding: utf-8 -*-
 
+import textwrap
+from common.exec_logger import run_and_done
+
 def main():
-    box1 = {
-        "ハンマー",
-        "釘",
-        "ペンチ",
-        }
-    print("Done: box1 = {\"ハンマー\", \"釘\", \"ペンチ\",}")
-    box2 = {
-        "釘",
-        "ペンチ",
-        "レンチ",
-        }
-    print("Done: box2 = {\"釘\", \"ペンチ\", \"レンチ\",}")
-    print("box1 - box2:", box1 - box2)
+    env = {}
+    run_and_done(textwrap.dedent("""
+        box1 = {
+            "ハンマー",
+            "釘",
+            "ペンチ",
+            }
+        """), env)
+    run_and_done(textwrap.dedent("""
+        box2 = {
+            "釘",
+            "ペンチ",
+            "レンチ",
+            }
+        """), env)
+    print(f"box1 - box2 = {env["box1"] - env["box2"]}")
 
-    print("-"*30)
-    box3 = {
-        "ハンマー",
-        "釘",
-        "ペンチ",
-        }
-    print("Done: box3 = {\"ハンマー\", \"釘\", \"ペンチ\",}")
-    print("\"ペンチ\" in box3", "ペンチ" in box3)
+    run_and_done(textwrap.dedent("""
+        box3 = {
+            "ハンマー",
+            "釘",
+            "ペンチ",
+            }\
+        """), env)
+    print(textwrap.dedent(f"""\
+        "ペンチ" in box3 = {"ペンチ" in env["box3"]}\
+        """))
 
-    print("-"*30)
-    print("box1 | box2:", box1 | box2)
-    print("box1 & box2:", box1 & box2)
+    print(f"box1 | box2 = {env["box1"] | env["box2"]}")
+    print(f"box1 & box2 = {env["box1"] & env["box2"]}")
     return
 
 

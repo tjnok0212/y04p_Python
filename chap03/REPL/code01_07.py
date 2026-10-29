@@ -1,35 +1,42 @@
 # -*- coding: utf-8 -*-
 
+import textwrap
+from common.exec_logger import run_and_done
+
 def main():
+    env = {}
     # 集合型を生成
-    colors = {
-        "red",
-        "green",
-        "blue",
-        }
-    print("Done: colors = {\"red\", \"green\", \"blue\",}")
+    run_and_done(textwrap.dedent("""\
+        colors = {
+            "red",
+            "green",
+            "blue",
+            }\
+        """), env)
 
     # 空っぽの集合型を生成
-    e = set(); print("Done: e = set()")
-    print("e:", e)
+    run_and_done("e = set()", env)
+    print(f"e = {env["e"]}")
 
     # set() を使って集合型を生成
-    fruits = set([
-        "orange",
-        "banana",
-        "mango",
-        ])
-    print("Done: fruits = set({\"orange\", \"banana\", \"mango\",})")
-    print("fruits:", fruits)
-    fruits = {
-        "orange",
-        "banana",
-        "mango",
-        "banana",
-        "mango",
-        }
-    print("Done: fruits = {\"orange\", \"banana\", \"mango\", \"banana\", \"mango\",}")
-    print("fruits:", fruits)
+    run_and_done(textwrap.dedent("""
+        fruits = set([
+            "orange",
+            "banana",
+            "mango",
+            ])\
+        """), env)
+    print(f"fruits = {env["fruits"]}")
+    run_and_done(textwrap.dedent("""
+        fruits = {
+            "orange",
+            "banana",
+            "mango",
+            "banana",
+            "mango",
+            }\
+        """), env)
+    print(f"fruits = {env["fruits"]}")
     return
 
 

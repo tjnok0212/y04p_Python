@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 
+from common.exec_logger import run_and_done
+
 def main():
+    env = {}
     # リストを生成
-    nums = list(range(1, 4))
-    print("nums =", nums)
+    run_and_done("nums = list(range(1, 4))", env)
+    print(f"nums = {env["nums"]}")
 
     # append で値を追加
-    nums.append(4)
-    nums.append(5)
+    run_and_done("nums.append(4)", env)
+    run_and_done("nums.append(5)", env)
 
     # 結果を確認
-    print("nums =", nums)
+    print(f"nums = {env["nums"]}")
     return
 
 

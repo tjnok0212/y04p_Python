@@ -1,29 +1,28 @@
 # -*- coding: utf-8 -*-
 
+from common.exec_logger import run_and_done
+
 def main():
+    env = {}
     # 2つのリストを生成
-    n1 = [1, 3, 5]
-    n2 = [2, 4, 6]
+    run_and_done("n1 = [1, 3, 5]", env)
+    run_and_done("n2 = [2, 4, 6]", env)
 
     # 2つのリストを結合して n3 に代入
-    n3 = n1 + n2
+    run_and_done("n3 = n1 + n2", env)
 
     # 内容を確認する
-    print("n1 =", n1)
-    print("n2 =", n2)
-    print("n3 =", n3)
+    print(f"n1 = {env["n1"]}")
+    print(f"n2 = {env["n2"]}")
+    print(f"n3 = {env["n3"]}")
 
-    print("-"*30)
+    run_and_done("a = [1, 2, 3]", env)  # リストを生成
+    run_and_done("a += [4, 5, 6]", env) # 異なるリストを追加
+    print(f"a = {env["a"]}")
 
-    a = [1, 2, 3]   # リストを生成
-    a += [4, 5, 6]  # 異なるリストを追加
-    print("a =", a)
-
-    print("-"*30)
-
-    b = [11, 22]        # リストを生成
-    b.extend([33, 44])  # 異なるリストを追加
-    print("b =", b)
+    run_and_done("b = [11, 22]", env)   # リストを生成
+    run_and_done("b.extend([33, 44])", env) # 異なるリストを追加
+    print(f"b = {env["b"]}")
     return
 
 

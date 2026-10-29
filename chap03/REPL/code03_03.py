@@ -1,21 +1,36 @@
 # -*- coding: utf-8 -*-
 
+import textwrap
+from common.exec_logger import run_and_done
+
 def main():
-    a = [char * 3 for char in ("a", "b", "c")]
-    print("Done: a = [char * 3 for char in (\"a\", \"b\", \"c\")]")
-    print("\"-\".join(a):", "-".join(a))
+    env = {}
+    run_and_done(textwrap.dedent("""\
+        a = [char * 3 for char in ("a", "b", "c")]\
+        """), env)
+    print(textwrap.dedent(f"""\
+        "-".join(a) = {"-".join(env["a"])}\
+        """))
 
-    print("-"*30)
-    s = "2020/02/20"; print("Done: s = \"2020/02/20\"")
-    a = s.split("/"); print("Done: a = s.split(\"/\")")
-    print("a:", a)
-    s = "-".join(a); print("Done: s = \"-\".join(a)")
-    print("s:", s)
+    run_and_done(textwrap.dedent("""\
+        s = "2020/02/20"\
+        """), env)
+    run_and_done(textwrap.dedent("""\
+        a = s.split("/")\
+        """), env)
+    print(f"a = {env["a"]}")
+    run_and_done(textwrap.dedent("""\
+        s = "-".join(a)\
+        """), env)
+    print(f"s = {env["s"]}")
 
-    print("-"*30)
-    s = "This is a pen."; print("Done: s = \"This is a pen\"")
-    print("s.replace(\"pen\", \"note\"):", s.replace("pen", "note"))
-    print("s:", s)
+    run_and_done(textwrap.dedent("""\
+        s = "This is a pen."\
+        """), env)
+    print(textwrap.dedent(f"""\
+        s.replace("pen", "note") = {env["s"].replace("pen", "note")}\
+        """))
+    print(f"s = {env["s"]}")
     return
 
 

@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 
+from common.exec_logger import run_and_done
+
 def main():
-    a, b, c = [2, 300, 4000]; print("Done: a, b, c = [2, 300, 4000]")
-    print("a =", a)
-    print("a, b, c:", a, b, c)
+    env = {}
+    run_and_done("a, b, c = [2, 300, 4000]", env)
+    print(f"a = {env["a"]}")
+    print(f"a, b, c = {env["a"]}, {env["b"]}, {env["c"]}")
     return
 
 
